@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+
+    <title> Vention Case Tracker</title>
+</head>
+<body>
+    <div class="global-wrapper">
+        <h1>Stopwatch</h1>
+        <div class="seconds-counter"><span id="seconds-counter"><label id="minutes">00</label>:<label id="seconds">00</label></span></div>
+        <div class="buttons">
+            <button class="button start" id="start">Start</button>
+            <button class="button pause" id="pause">Pause</button>
+            <button class="button reset" id="reset">Reset</button>
+
+        </div>
+        <br />
+        <div style="display:flex;justify-content:flex-start">
+            <input style="margin-right:1em" type="text" id="CaseName"/>
+            <button class="small-btn" onclick="changeContent()">New Case</button>
+        </div>
+        <div>
+            <h2 class="global-wrapper"> Cases</h2>
+            <div id="case-container">
+                <p style="width: 100%; "> Case 1 <span><button class="small-btn" id="case-btn">Record</button></span> <span id="time">00:00</span></p>
+                <!--<textarea id="output" style="width:100px; height:100px;"></textarea>-->
+            </div>
+        </div>
+</body>
+<script src="code.js"></script>
+</html>

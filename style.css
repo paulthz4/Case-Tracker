@@ -1,0 +1,79 @@
+body {
+    /*background: linear-gradient(to right, #15344f, #eff2f8);*/
+    background-color:#eff2f8;
+    font-family:  sans-serif;
+}
+
+h1 {
+    font-size: 44px;
+}
+
+.global-wrapper {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seconds-counter {
+    text-align: center;
+    padding: 1rem;
+    font-size: 32px;
+}
+
+.button {
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border-radius: 10px;
+    font-family: sans-serif; /*'Zen Kurenaido'*/
+    font-weight: 800;
+    background-color: #005087;
+    color: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 150px;
+    border: 5px solid transparent;
+}
+
+    .button:hover {
+        background-position: right center;
+        background-color: #bccace;
+        color:black;
+    }
+
+button {
+    
+/*    background-image: linear-gradient(to right, #f6d365 0%, #E7A73C 51%, #f6d365 100%);
+*/}
+#case-container{
+    border: solid 2px black;
+    width:auto;
+    height: fit-content;
+}
+.small-btn{
+    width: fit-content;
+    height: 2em;
+    color: white;
+    background-color: #005087;
+    border: 5px solid transparent;
+    border-radius: 8px;
+}
+.small-btn:hover {
+    background-position: right center;
+    background-color: #bccace;
+    color: black;
+}
+span {
+    padding: 5px;
+    border: 5px solid transparent;
+}
