@@ -58,7 +58,6 @@ function changeContent() {
     //node.style.width = "100%";
     node.appendChild(document.createTextNode(name));
     
-   // node.appendChild(btn);
     node.style.width = "100%";
     node.style.paddingRight = "1em";
     var btn = document.createElement("BUTTON");
