@@ -24,6 +24,8 @@ h1 {
     text-align: center;
     padding: 1rem;
     font-size: 32px;
+    width:fit-content;
+    height:500px;
 }
 
 .button {
@@ -50,18 +52,31 @@ h1 {
         background-color: #bccace;
         color:black;
     }
+#main{
+    display: flex;
+}
 
-button {
-    
-/*    background-image: linear-gradient(to right, #f6d365 0%, #E7A73C 51%, #f6d365 100%);
-*/}
+#main div{
+    flex:40%;
+}
+
+.stopwatch {
+    float:left;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:fit-content;
+    height:fit-content;
+}
 #case-container{
-    border: solid 2px black;
+    border: solid 1px black;
     width:fit-content;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: space-around;
+    justify-content: center;
+    align-items:center;
+
 }
 .small-btn{
     width: fit-content;
@@ -85,7 +100,7 @@ span {
 }
 .case{
     
-    width:100%;
+    width:fit-content;
     height:auto;
     padding: 1em;
 }
