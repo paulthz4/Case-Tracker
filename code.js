@@ -49,33 +49,48 @@ btn.addEventListener('click',
         time.textContent = document.getElementById("minutes").textContent +" : "+ document.getElementById("seconds").textContent;
     });
 
+let btn2 = document.getElementById("delete");
+btn2.addEventListener("click",
+    function () {
+        //console.log(btn2.parentElement);
+        btn2.parentElement.remove();
+    });
+
 const cases = [];
 function changeContent() {
     var name = document.getElementById("CaseName").value;
-    
-    var container = document.getElementById("case-container");
-    var node = document.createElement("P");
-    //node.style.width = "100%";
-    node.appendChild(document.createTextNode(name));
-    
-    node.style.width = "100%";
-    node.style.paddingRight = "1em";
-    var btn = document.createElement("BUTTON");
-    btn.innerHTML = "Record";
-    btn.classList.add("small-btn");
-    var span = document.createElement("SPAN");
-    span.appendChild(btn);
-    node.appendChild(span);
-    var span2 = document.createElement("SPAN");
-    span2.textContent = "00:00";
-    node.appendChild(span2);
-    btn.addEventListener('click',
-        function () {
-            var a = document.getElementById("case-container").lastElementChild;
-            var time = a.lastChild;
-            console.log(time);
-            time.textContent = document.getElementById("minutes").textContent + " : " + document.getElementById("seconds").textContent;
-        });
+    if (name != "") {
+        var container = document.getElementById("case-container");
+        var node = document.createElement("P");
+        node.appendChild(document.createTextNode(name));
 
-    container.appendChild(node);
+        node.classList.add("case");
+        var btn = document.createElement("BUTTON");
+        btn.innerHTML = "Record";
+        btn.classList.add("small-btn");
+        var span = document.createElement("SPAN");
+        span.appendChild(btn);
+        node.appendChild(span);
+        let b = document.createElement("BUTTON");
+        b.classList.add("small-btn");
+        b.textContent = "Delete";
+        b.addEventListener("click",
+            function () {
+                b.parentElement.remove();
+            });
+        node.appendChild(b);
+        var span2 = document.createElement("SPAN");
+        span2.textContent = "00:00";
+        node.appendChild(span2);
+        btn.addEventListener('click',
+            function (e) {
+                //var a = document.getElementById("case-container").lastElementChild;
+                var a = e.target.parentElement;
+                var time = a.parentElement.lastChild;
+                //console.log(time);
+                time.textContent = document.getElementById("minutes").textContent + " : " + document.getElementById("seconds").textContent;
+            });
+        
+        container.appendChild(node);
+    }
 }

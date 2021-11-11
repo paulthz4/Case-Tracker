@@ -77,3 +77,9 @@ span {
     padding: 5px;
     border: 5px solid transparent;
 }
+.case{
+    margin:auto;
+    width:30%;
+    height:auto;
+    padding: 1em;
+}
