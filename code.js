@@ -87,7 +87,6 @@ function changeContent() {
                 //var a = document.getElementById("case-container").lastElementChild;
                 var a = e.target.parentElement;
                 var time = a.parentElement.lastChild;
-                //console.log(time);
                 time.textContent = document.getElementById("minutes").textContent + " : " + document.getElementById("seconds").textContent;
             });
         
