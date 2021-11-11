@@ -57,8 +57,11 @@ button {
 */}
 #case-container{
     border: solid 2px black;
-    width:auto;
+    width:fit-content;
     height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
 }
 .small-btn{
     width: fit-content;
@@ -81,8 +84,8 @@ span {
     border: 5px solid transparent;
 }
 .case{
-    margin:auto;
-    width:30%;
+    
+    width:100%;
     height:auto;
     padding: 1em;
 }
