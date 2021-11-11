@@ -8,7 +8,7 @@ const seconds = document.getElementById('seconds');
 
 // this code should regulate the counting of seconds
 
-const stopwatch = {
+/*const stopwatch = {
     second: 0,
     start: function () {
         if (!this.interval) {
@@ -40,8 +40,72 @@ const stopwatch = {
 start.addEventListener('click', function () { stopwatch.start(); });
 pause.addEventListener('click', function () { stopwatch.pause(); });
 reset.addEventListener('click', function () { stopwatch.reset(); });
+*/
 
-//
+const timer = document.getElementById('stopwatch');
+
+var hr = 0;
+var min = 59;
+var sec = 0;
+var stoptime = true;
+
+function startTimer() {
+  if (stoptime == true) {
+        stoptime = false;
+        timerCycle();
+    }
+}
+function stopTimer() {
+  if (stoptime == false) {
+    stoptime = true;
+  }
+}
+
+
+
+function timerCycle() {
+    if (stoptime == false) {
+    sec = parseInt(sec);
+    min = parseInt(min);
+    hr = parseInt(hr);
+
+    sec = sec + 1;
+
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    if (min == 60) {
+      hr = hr + 1;
+      min = 0;
+      sec = 0;
+    }
+
+    if (sec < 10 || sec == 0) {
+      sec = '0' + sec;
+    }
+    if (min < 10 || min == 0) {
+      min = '0' + min;
+    }
+    if (hr < 10 || hr == 0) {
+      hr = '0' + hr;
+    }
+
+    timer.innerHTML = hr + ':' + min + ':' + sec;
+
+    setTimeout("timerCycle()", 1000);
+  }
+}
+function resetTimer() {
+  timer.innerHTML = "00:00:00";
+  stoptime = true;
+  hr = 0;
+  sec = 0;
+  min = 0;
+}
+
+
+//add new case and record time and delete case events 
 var btn = document.getElementById("case-btn");
 btn.addEventListener('click',
     function () {
@@ -73,6 +137,7 @@ function changeContent() {
         node.appendChild(span);
         let b = document.createElement("BUTTON");
         b.classList.add("small-btn");
+        b.classList.add("delete-btn");
         b.textContent = "Delete";
         b.addEventListener("click",
             function () {

@@ -73,6 +73,9 @@ button {
     background-color: #bccace;
     color: black;
 }
+.delete-btn{
+    background-color: rgb(238, 105, 105);
+}
 span {
     padding: 5px;
     border: 5px solid transparent;
@@ -82,4 +85,9 @@ span {
     width:30%;
     height:auto;
     padding: 1em;
+}
+img{
+    margin-right: 2%;
+    width:3em;
+    height: auto;
 }
