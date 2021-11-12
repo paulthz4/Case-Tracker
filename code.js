@@ -83,16 +83,18 @@ function changeContent() {
     var name = document.getElementById("CaseName").value;
     if (name != "") {
         var container = document.getElementById("case-container");
+        //make p tag that surrounds everything
         var node = document.createElement("P");
-        node.appendChild(document.createTextNode(name));
-
-        node.classList.add("case");
+        // record button
         var btn = document.createElement("BUTTON");
         btn.innerHTML = "Record";
         btn.classList.add("small-btn");
         var span = document.createElement("SPAN");
         span.appendChild(btn);
         node.appendChild(span);
+        node.appendChild(document.createTextNode(name));
+        node.classList.add("case");
+        
         let b = document.createElement("BUTTON");
         b.classList.add("small-btn");
         b.classList.add("delete-btn");
@@ -105,9 +107,9 @@ function changeContent() {
         var span2 = document.createElement("SPAN");
         span2.textContent = "00:00:00";
         node.appendChild(span2);
+        // event for recording time
         btn.addEventListener('click',
             function (e) {
-                //var a = document.getElementById("case-container").lastElementChild;
                 var a = e.target.parentElement;
                 var time = a.parentElement.lastChild;
                 time.textContent = document.getElementById("stopwatch").textContent;
