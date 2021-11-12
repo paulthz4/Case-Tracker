@@ -1,6 +1,7 @@
 body {
     /*background: linear-gradient(to right, #15344f, #eff2f8);*/
-    background-color:#eff2f8;
+    /* background-color:#eff2f8; */
+    background-color:white;
     font-family:  sans-serif;
 }
 
@@ -70,6 +71,7 @@ h1 {
 }
 #case-container{
     border: solid 1px black;
+    border-radius: 15px;
     width:fit-content;
     height: fit-content;
     display: flex;
@@ -78,6 +80,13 @@ h1 {
     align-items:center;
 
 }
+
+#case-container div{
+    border-bottom: 1px solid black;
+    padding: 3px 3px 15px 3px;
+    display:flex;justify-content:flex-start;
+}
+
 .small-btn{
     width: fit-content;
     height: 2em;
@@ -92,7 +101,7 @@ h1 {
     color: black;
 }
 .delete-btn{
-    background-color: rgb(238, 105, 105);
+    background-color: rgb(228, 64, 64);
 }
 span {
     padding: 5px;

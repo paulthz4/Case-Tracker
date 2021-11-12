@@ -25,16 +25,17 @@
             <div class="stopwatch">
                 <h2>Stopwatch</h2>
                 <div class="seconds-counter"><span id="stopwatch">00:00:00</span></div>
-                <button class="button start" onclick="startTimer()" id="start">Start</button>
-                <button class="button pause" onClick="stopTimer()" id="pause">Pause</button>
-                <button class="button reset" onClick="resetTimer()" id="reset">Reset</button>
+                <button class="button start" style="background-color:green" onclick="startTimer()" id="start">Start</button>
+                <button class="button pause"  style="background-color:red" onClick="stopTimer()" id="pause">Pause</button>
+                <button class="button reset" style="background-color: #005087;" onClick="resetTimer()" id="reset">Reset</button>
             </div>
             
             <div id="case-container" >
                 <h2 class="globasl-wrapper"> Cases</h2>
-                <div style="display:flex;justify-content:flex-start">
+                <div >
                     <input style="margin-right:1em" type="text" id="CaseName"/>
                     <button class="small-btn" onclick="changeContent()">New Case</button>
+                    <hr>
                 </div>
                 <p class="case"> Case 1 <span><button class="small-btn" id="case-btn">Record</button></span> <button class="small-btn delete-btn" id="delete">Delete</button><span id="time">00:00:00</span></p>
                 <!--<textarea id="output" style="width:100px; height:100px;"></textarea>-->
