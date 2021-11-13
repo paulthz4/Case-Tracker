@@ -95,6 +95,11 @@ function changeContent() {
         node.appendChild(document.createTextNode(name));
         node.classList.add("case");
         
+        //creates span tag that contains the time
+        var span2 = document.createElement("SPAN");
+        span2.textContent = "00:00:00";
+        node.appendChild(span2);
+        // creates the delete case button
         let b = document.createElement("BUTTON");
         b.classList.add("small-btn");
         b.classList.add("delete-btn");
@@ -104,14 +109,13 @@ function changeContent() {
                 b.parentElement.remove();
             });
         node.appendChild(b);
-        var span2 = document.createElement("SPAN");
-        span2.textContent = "00:00:00";
-        node.appendChild(span2);
+        
         // event for recording time
         btn.addEventListener('click',
             function (e) {
                 var a = e.target.parentElement;
-                var time = a.parentElement.lastChild;
+                //console.log(a.parentElement.children[1].innerHTML);
+                var time = a.parentElement.children[1];
                 time.textContent = document.getElementById("stopwatch").textContent;
             });
         
