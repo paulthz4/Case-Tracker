@@ -109,7 +109,6 @@ function changeContent() {
                 b.parentElement.remove();
             });
         node.appendChild(b);
-        
         // event for recording time
         btn.addEventListener('click',
             function (e) {
