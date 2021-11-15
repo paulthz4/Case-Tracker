@@ -125,12 +125,15 @@ function changeContent() {
                 }
                 if(arr2[0] > 60){
                   arr2[1] += 1;
+                  arr2[0] = 60 - (parseInt(arr1[0]) + parseInt(arr[0]));
                 }
                 if(arr2[1] > 60){
                 arr2[1] += 1
+                arr2[1] = 60 - parseInt(arr1[1]) + parseInt(arr[1]);
+                
                 }
                 console.log(arr2[0] +", "+arr2[1]+", " +arr2[2]);
-                time.textContent =  (parseInt(arr1[0]) + parseInt(arr[0])) + ":" + (parseInt(arr1[1]) + parseInt(arr[1])) + ":" + (parseInt(arr1[2]) + parseInt(arr[2]));
+                time.textContent =  arr2[2] + ":" + arr2[1] + ":" + arr2[0];
                 //time.textContent = document.getElementById("stopwatch").textContent;
             });
         
