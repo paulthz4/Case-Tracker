@@ -112,11 +112,26 @@ function changeContent() {
         // event for recording time
         btn.addEventListener('click',
             function (e) {
-                var a = e.target.parentElement;
-                //console.log(a.parentElement.children[1].innerHTML);
-                var time = a.parentElement.children[1];
-                // make current stopwatch time add to recorded time
-                time.textContent = document.getElementById("stopwatch").textContent;
+                let a = e.target.parentElement;
+                console.log(a.parentElement.children[1].innerHTML);
+                let time = a.parentElement.children[1];
+                let arr1 = time.textContent.split(":");
+                let str = document.getElementById("stopwatch").textContent;
+                let arr = str.split(":");
+                console.log(arr);
+                let arr2 = []
+                for(var i = 0; i<3;i++){
+                  arr2[i] = parseInt(arr1[i]) + parseInt(arr[i])
+                }
+                if(arr2[0] > 60){
+                  arr2[1] += 1;
+                }
+                if(arr2[1] > 60){
+                arr2[1] += 1
+                }
+                console.log(arr2[0] +", "+arr2[1]+", " +arr2[2]);
+                time.textContent =  (parseInt(arr1[0]) + parseInt(arr[0])) + ":" + (parseInt(arr1[1]) + parseInt(arr[1])) + ":" + (parseInt(arr1[2]) + parseInt(arr[2]));
+                //time.textContent = document.getElementById("stopwatch").textContent;
             });
         
         container.appendChild(node);
