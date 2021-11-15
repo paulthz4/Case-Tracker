@@ -115,6 +115,7 @@ function changeContent() {
                 var a = e.target.parentElement;
                 //console.log(a.parentElement.children[1].innerHTML);
                 var time = a.parentElement.children[1];
+                // make current stopwatch time add to recorded time
                 time.textContent = document.getElementById("stopwatch").textContent;
             });
         
