@@ -20,6 +20,10 @@ h1 {
     border-radius:9px;
     padding: 1em 2em;
     margin:0;
+    box-shadow: 1px 1px 1px grey;
+    box-shadow: -1px -1px -1px grey;
+    
+    
 }
 .global-wrapper {
     display: flexbox;
